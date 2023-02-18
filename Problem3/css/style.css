@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1700px;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(199, 198, 198);
+}
+.News{
+    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.News p{
+    font-size: 40px;
+    position: absolute;
+    left: 40px;
+    color: rgb(79, 42, 165);
+}
+.ApplyNow{
+    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(79, 42, 165);
+}
+.ApplyNow button{
+    position: absolute;
+    right: 20px;
+    border: none;
+    padding: 0px;
+}
+.ApplyNow button a0{
+    font-size: 30px;
+    background-color: orange;
+    border: none;
+    padding: 0px;
+    outline: none;
+}
+.ApplyNow button a0 a{
+    font-size: 20px;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.row{
+    display: flex;
+    flex-wrap:  wrap;
+}
+.NewsContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1700px;
+    max-height: 3000px;
+
+}
+.page-col{
+    width: 30%;
+    height: 60%;
+    background-color: white;
+}
+.page-col h1{
+    font-size: 20px;
+}
+.page-col h1 a{
+    text-decoration: none;
+}
+.Published{
+    line-height: 550%;
+}
+img{
+    width: 300px;
+    height: 225px;
+}
+.box{
+    text-align: center;
+    line-height: 550%;
+}
+
+/*Pagination*/
+.pagination a{
+    background-color: rgb(199, 198, 198);
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+.pagination a.active{
+    background-color: dodgerblue;
+    color: white;
+}
+.pagination a:hover:not(.active){
+    background-color: #ddd;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Problem1</title>
+        <style>
+            .logo{
+                height: 50%;
+                
+                float: left;
+                text-align: center;
+            }
+            .total-container{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+
+                height: 150px;
+
+                padding: 10;
+                margin: 0;
+                list-style:none;
+                background-color: rgb(33, 73, 128);
+            }
+            .sub-container{
+                flex-direction: column;
+                height: 150px;
+            }
+            .search-container{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-end;
+                height: 75px;
+                padding: 10;
+                margin: 0;
+                list-style:none;
+                background-color: rgb(33, 73, 128);
+            }
+            .menu-container{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                height: 75px;
+                padding: 10;
+                margin: 0;
+                list-style:none;
+                background-color: rgb(33, 73, 128);
+            }
+            .flex-item{
+                background: none;
+                padding: 20px;
+                color: white;
+                height: 100px;
+                text-align:center;
+                align-items: center;
+            }
+            .DropDown{
+                display: inline-block;
+                position: relative;
+            }
+            .DropDown-Content {
+                display: none;
+                position: absolute;
+                width: auto;
+                overflow: auto;
+                box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+            }
+            .DropDown:hover .DropDown-Content {
+                display: block;
+            }
+            .DropDown-Content a {
+                display: block;
+                color:white;
+                padding: 20px;
+                background-color: rgb(33, 73, 128);
+            }
+            .Jump{
+                color: white;
+                text-decoration: none;
+            }
+            .input{
+                float: left;
+                padding: 20px;
+                border: none;
+                height: 50px;
+            }
+            input[type="text"] {
+            width: 200px;
+            height: 20px;
+            padding-right: 50px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            function SearchSubmit(){
+                let x = document.querySelector("#search").value;
+                document.cookie = "name=" +btoa(x) + ";expires" + new Date(2100,0,1).toUTCString(); 
+                console.log("SearchSubmit");
+            }
+        </script>
+
+        <div class="total-container">
+            <a href="https://antra.com" id="logo" class="logo">
+                <img src="images/logo.png" alt="antra"/>
+            </a >
+
+            <div class="sub-container">
+                <div class="search-container">
+                    <li class="flex-item">
+                        <div href="#" class="DropDown">
+                            USER
+                            <div class="DropDown-Content">
+                                <a href="#">PROFILE</a>
+                                <a href="#">COURSES</a>
+                                <a href="#">SETTING</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="input">
+                        <input type="text" id="search" placeholder="Search..">
+                        <input type="button" value="submit" onclick="SearchSubmit()">
+                    </li>
+                    
+                </div>
+
+                <div class="menu-container">
+                    <li class="flex-item">
+                        NEWS
+                    </li>
+                    <li class="flex-item">
+                        <div href="#" class="DropDown">
+                            ABOUT THE UNIVERSITY
+                            <div class="DropDown-Content">
+                                <a href="#">PARTENER UNIVERSITY</a>
+                                <a href="#">TRAINING METHOD</a>
+                                <a href="#">PROFESSOR</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex-item">
+                        <div  href="#" class="DropDown">
+                            TRAINING COURSES
+                            <div class="DropDown-Content">
+                                <a href="#">SQL</a>
+                                <a href="#">.NET</a>
+                                <a href="#">HTML & CSS</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex-item">
+                        <a href="https://antra.com/about-us/" class="Jump">
+                            FOR COMPANIES
+                        </a>
+                    </li>
+                    <li class="flex-item">
+                        FORUM
+                    </li>
+                    <li class="flex-item">
+                        <a href="https://antra.com/contact/" class="Jump">
+                            CONTACTS
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
